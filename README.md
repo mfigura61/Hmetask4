@@ -41,14 +41,14 @@ total 0
 3. > [vagrant@nfss nfs-share]$ ls    #и на сервере видим недавно созданный клиентом файл.
 > test_write.txt
 4. попытаемся примаунтить еще раз расшаренную папку. Обратим внимание на udp и nfs версию.Все работает как надо, согласно опциям.
-''' [vagrant@nfsc nfs_share]$ sudo mount -t nfs 192.168.50.10:/nfs-share/ /media/nfs_share/  -o rw,noatime,noauto,x-systemd.automount,noexec,nosuid,proto=udp,vers=3  -v
-mount.nfs: timeout set for Sun Aug 16 15:38:07 2020
-mount.nfs: trying text-based options 'proto=udp,vers=3,addr=192.168.50.10'
-mount.nfs: prog 100003, trying vers=3, prot=17
-mount.nfs: trying 192.168.50.10 prog 100003 vers 3 prot UDP port 2049
-mount.nfs: prog 100005, trying vers=3, prot=17
-mount.nfs: trying 192.168.50.10 prog 100005 vers 3 prot UDP port 20048
-mount.nfs: mount(2): Device or resource busy
-mount.nfs: /media/nfs_share is busy or already mounted '''
+> [vagrant@nfsc nfs_share]$ sudo mount -t nfs 192.168.50.10:/nfs-share/ /media/nfs_share/  -o rw,noatime,noauto,x-systemd.automount,noexec,nosuid,proto=udp,vers=3  -v
+> mount.nfs: timeout set for Sun Aug 16 15:38:07 2020
+> mount.nfs: trying text-based options 'proto=udp,vers=3,addr=192.168.50.10'
+> mount.nfs: prog 100003, trying vers=3, prot=17
+> mount.nfs: trying 192.168.50.10 prog 100003 vers 3 prot UDP port 2049
+> mount.nfs: prog 100005, trying vers=3, prot=17
+> mount.nfs: trying 192.168.50.10 prog 100005 vers 3 prot UDP port 20048
+> mount.nfs: mount(2): Device or resource busy
+> mount.nfs: /media/nfs_share is busy or already mounted 
 
 
